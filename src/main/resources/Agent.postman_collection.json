@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "b50ba45a-c135-486f-a3eb-77e9b7e27283",
+		"name": "Agent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create Agency and Client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJOaXJhbmphbiIsImF1dGgiOiJST0xFX0FETUlOIiwiaWF0IjoxNjQ5NTI4OTgzLCJleHAiOjE2NDk1MzI1ODN9._8_vz7TRl3HLwgIxphYiuwV0AOFwTCXOusefLRsxkRM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"Sdzdzd\", \n\"address1\":{\n\"state\":\"karnataka\",\n \t\t\"city\":\"Gdada\",\n\t\t\"phoneNumber\":\"8892060522\"\n},\n\"address2\":{\n\"state\":\"karnataka131\",\n \t\t\"city\":\"Gdadaada\",\n\t\t\"phoneNumber\":\"8892060422\"\n},\n \"clients\":[\n\t\t{\n\t\t\"name\":\"Niara\",\n \t\t\"email\":\"nnchavadi2@gmail.com\",\n\t\t\"phoneNumber\":\"7895641231\",\n        \"totalBill\":\"1112\"\n\t\t},\n        {\n\t\t\"name\":\"Niaraadda\",\n \t\t\"email\":\"nnchavadi2@gmail.com\",\n\t\t\"phoneNumber\":\"7829616124\",\n        \"totalBill\":\"111222\"\n\t\t}\n\t\t\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8546/agents/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8546",
+					"path": [
+						"agents",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create  access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Niranjan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "456123",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ROLE_ADMIN",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8546/agency/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8546",
+					"path": [
+						"agency",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update  Client",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJOaXJhbmphbiIsImF1dGgiOiJST0xFX0FETUlOIiwiaWF0IjoxNjQ5NTI4ODU4LCJleHAiOjE2NDk1MzI0NTh9.s3fck5VBkMz3LG0hZs7pik4RSTOd5USgwKZUcmT6ieI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"name\":\"NiranjanChavadi\",\n \t\t\"email\":\"nnchavadi9@gmail.com\",\n\t\t\"phoneNumber\":\"9739315790\",\n        \"totalBill\":\"1000\"  \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8546/agents/update/6251cb170122a20cfcd3107f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8546",
+					"path": [
+						"agents",
+						"update",
+						"6251cb170122a20cfcd3107f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find max total Bill in the client",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJOaXJhbmphbiIsImF1dGgiOiJST0xFX0FETUlOIiwiaWF0IjoxNjQ5NTI4ODU4LCJleHAiOjE2NDk1MzI0NTh9.s3fck5VBkMz3LG0hZs7pik4RSTOd5USgwKZUcmT6ieI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8546/agents/fetch/6251cb170122a20cfcd31081",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8546",
+					"path": [
+						"agents",
+						"fetch",
+						"6251cb170122a20cfcd31081"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
