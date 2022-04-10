@@ -6,13 +6,11 @@ import com.agency.entitty.Agency;
 import com.agency.entitty.AppUserRole;
 import com.agency.entitty.Client;
 import com.agency.entitty.Customer;
-import com.agency.exception.CustomException;
 import com.agency.repository.AgencyRepository;
 import com.agency.repository.ClientRepository;
 import com.agency.repository.CustomerRepository;
 import com.agency.security.JwtTokenProvider;
 import com.agency.util.AppStringUtil;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -20,18 +18,10 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.NoSuchElementException;
-import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class AgencyServiceImpl implements IAgencyService {

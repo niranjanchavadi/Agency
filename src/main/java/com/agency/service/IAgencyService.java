@@ -5,9 +5,6 @@ import com.agency.VO.AgencyVO;
 import com.agency.entitty.Agency;
 import com.agency.entitty.AppUserRole;
 import com.agency.entitty.Client;
-import org.springframework.security.core.userdetails.User;
-
-import java.util.Optional;
 
 public interface IAgencyService {
 
