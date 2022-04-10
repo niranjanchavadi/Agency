@@ -1,14 +1,8 @@
 package com.agency.util;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
+
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
-import static org.springframework.http.HttpHeaders.ACCEPT;
-import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
+
 
 @Component
 public class AppStringUtil {

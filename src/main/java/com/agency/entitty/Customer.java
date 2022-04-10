@@ -1,6 +1,5 @@
 package com.agency.entitty;
 
-import com.crowdlending.enums.Enums;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
